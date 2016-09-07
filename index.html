@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino</title>
+    <link rel="stylesheet" href="libs/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div id="casino">
+      <h1>Welcome, guest!</h1>
+      <a class="buttons settings-button" href="#" role="button">Settings</a>
+      <a class="buttons start-button" href="#" role="button">Start</a>
+      <a class="buttons exit-button invisible" href="#" role="button">Exit</a>
+      <div class="settings invisible">
+          <div class="text-box">
+            <span>Slots amount: </span><span class="slots-amount"></span>
+          </div>
+        <form action="do-somthing">
+          <div class="chosen-slot">
+            <label>Choose slot: 
+              <input type="number" min="1" value="1">
+            </label>
+          </div>
+          <a class="buttons save-button" href="#" role="button">Save</a>
+        </form>
+      </div>
+      <div class="slot-machine invisible">
+      <div class="text-box">
+        <span>Your money: </span><span class="credit"></span>
+      </div>
+        <div class="numbers">
+          <span class="number">1</span>
+          <span class="number">2</span>
+          <span class="number">3</span>
+        </div>
+        <div class="text-box">
+          <span>Money in slot: </span><span class="slot-money"></span>
+        </div>
+        <form action="do-somthing">
+          <div class="put-money-box">
+            <label>Put money to slot: 
+              <input type="number" min="1" value="1">
+            </label>
+          </div>
+          <a class="buttons play-button" href="#" role="button">Play</a>
+        </form>
+      </div>
+    </div>
+
+    <script src="libs/jquery-3.1.0.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

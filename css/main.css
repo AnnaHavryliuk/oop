@@ -1,0 +1,97 @@
+body {
+  min-width: 400px;
+  margin: 0;
+  font: 18px/1.5 sans-serif;
+  color: #f5b22d;
+  background: url('../img/slots.jpg') no-repeat;
+  background-position: center 0;
+  background-size: cover cover;
+}
+#casino {
+  position: relative;
+  width: 400px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+h1 {
+  font-size: 1.8em;
+}
+.settings {
+  margin: 15px;
+  padding: 25px;
+  border-radius: 50px;
+  box-shadow: 0 0 4px 2px rgb(83, 90, 118);
+  background-color: rgb(83, 90, 118);
+}
+.slot-machine {
+  margin: 15px;
+  padding: 25px;
+  box-shadow: 0 0 6px 3px rgb(12, 11, 16);
+  border-radius: 20%;
+  background-color: rgb(12, 11, 16);
+}
+.credit, .slots-amount, .slot-money {
+  margin-left: 2px;
+  font-size: 1.2em;
+}
+.text-box {
+  margin-bottom: 15px;
+}
+.chosen-slot, .put-money-box {
+  margin-bottom: 10px;
+}
+.chosen-slot input, .put-money-box input {
+  margin: 5px 0;
+  padding: 0 4px;
+  border: ridge 3px #854b33;
+  color: inherit;
+  font-size: 1.2em;
+}
+.chosen-slot input {
+background-color: rgba(83, 90, 118, 0.8);
+}
+.put-money-box input {
+  background-color: rgba(83, 90, 118, 0.8);
+}
+.number {
+  padding: 0 15px;
+  border-radius: 20%;
+  font-size: 4em;
+  background-color: rgba(83, 90, 118, 0.8);
+}
+.buttons {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font: inherit;
+  text-decoration: none;
+  background-color: #854b33;
+}
+.buttons:visited {
+  color: inherit;
+}
+.buttons:hover {
+  background-color: #583121;
+}
+.settings-button {
+  margin-right: 20px;
+}
+.start-button, .exit-button {
+  margin-left: 20px;
+}
+.save-button {
+  box-shadow: 0 0 4px 2px #302217;
+}
+#message {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px;
+  border: red solid 2px;
+  font-size: 0.7em;
+  color: white;
+  background-color: rgba(207, 116, 87, 0.7);
+}
+.invisible {
+  display: none;
+}
