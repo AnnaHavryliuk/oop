@@ -68,7 +68,7 @@ background-color: rgba(83, 90, 118, 0.8);
   text-decoration: none;
   background-color: #854b33;
 }
-.buttons:visited {
+.buttons:visited, .buttons:link {
   color: inherit;
 }
 .buttons:hover {
