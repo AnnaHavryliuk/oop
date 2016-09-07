@@ -49,8 +49,9 @@ $(function () {
   });
 
   $settings.find('.save-button').on('click', function () {
-    var slot = casino.allSlotMachines[user.slotIndex];
+    var slot;
     user.slotIndex = chosenSlotValidation($chosenSlotIndex.val()) - 1;
+    slot = casino.allSlotMachines[user.slotIndex];
 
     refreshSlotHTML(slot.getMoney(), '123');
 
