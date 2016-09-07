@@ -20,15 +20,15 @@ h1 {
   margin: 15px;
   padding: 20px;
   border-radius: 50px;
-  box-shadow: 0 0 4px 2px rgb(83, 90, 118);
-  background-color: rgb(83, 90, 118);
+  box-shadow: 0 0 4px 2px #423e55;
+  background-color: #423e55;
 }
 .slot-machine {
   margin: 15px;
   padding: 20px;
-  box-shadow: 0 0 6px 3px rgb(12, 11, 16);
+  box-shadow: 0 0 6px 3px #0c0b10;
   border-radius: 20%;
-  background-color: rgb(12, 11, 16);
+  background-color: #0c0b10;
 }
 .credit, .slots-amount, .slot-money {
   margin-left: 2px;
@@ -48,7 +48,8 @@ h1 {
   font-size: 1.2em;
 }
 .chosen-slot input {
-background-color: rgba(83, 90, 118, 0.8);
+  margin-left: 4px;
+  background-color: rgba(83, 90, 118, 0.8);
 }
 .put-money-box input {
   background-color: rgba(83, 90, 118, 0.8);
