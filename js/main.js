@@ -1,7 +1,7 @@
 'use strict'
 $(function () {
-  var user = new User(0)
-    , casino = new Casino(1000000, 5)
+  var user = new User()
+    , casino = new Casino()
 
     , $settingsButton = $('.settings-button')
     , $credit = $('.credit')
@@ -70,8 +70,8 @@ $(function () {
   });
 
   $exitButton.on('click', function () {
-    user = new User(0);
-    casino = new Casino(1000000, 5);
+    user = new User();
+    casino = new Casino();
 
     $settings.find('.slots-amount').text(casino.getSlotMachinesNumber());
     $chosenSlotIndex.attr('max', casino.getSlotMachinesNumber());
@@ -83,14 +83,15 @@ $(function () {
   });
 
   $slotMachine.find('.play-button').on('click', function () {
-    var putMoney = parseFloat($putMoneyBox.val(), 10)
+    var casinoMoney = 1000000
+    , putMoney = parseFloat($putMoneyBox.val(), 10)
     , slot = casino.allSlotMachines[user.slotIndex]
     , result
     , message;
 
     if (!isNaN(putMoney) && putMoney > 0 && putMoney <= user.credit) {
       if (casino.getAllMoney() < putMoney * 5) {
-        casino = new Casino(1000000, casino.getSlotMachinesNumber());
+        casino = new Casino(casinoMoney, casino.getSlotMachinesNumber());
         slot = casino.allSlotMachines[user.slotIndex];
         refreshSlotHTML(slot.getMoney(), '123');
         message = 'We have updated casino cash';
@@ -118,17 +119,26 @@ $(function () {
 });
 
 function User(credit, chosenSlotIndex) {
+  var DEFAULT_CREDIT = 1000
+    , DEFAULT_SLOT = 0;
+
+  credit = parseInt(credit, 10);
   chosenSlotIndex = parseInt(chosenSlotIndex, 10);
-  if (isNaN(chosenSlotIndex)) {
-    chosenSlotIndex = 0;
+
+  if (isNaN(credit) || !credit) {
+    credit = DEFAULT_CREDIT;
   }
-  this.credit = 1000;
+
+  if (isNaN(chosenSlotIndex)) {
+    chosenSlotIndex = DEFAULT_SLOT;
+  }
+  this.credit = credit;
   this.slotIndex = chosenSlotIndex;
 }
 
 function Casino(allMoney, slotMachinesAmount) {
-  var DEFAULT_MONEY = 1000000000
-    , DEFAULT_SLOTS_AMOUNT = 3
+  var DEFAULT_MONEY = 1000000
+    , DEFAULT_SLOTS_AMOUNT = 5
     , createSlotMachines;
 
   allMoney = parseFloat(allMoney, 10);
